@@ -1,0 +1,53 @@
+FORMAT: 1A
+
+# PMC Edge API
+
+Api of the PMC edge project
+
+## PositionPeriod Screen [/position_periods/{position_id}/{period_id}]
+
+
++ Model (application/hal+json)
+
++ Parameters
+    + position_id (required, number, `1`) ... ID of the position in the form of an integer
+    + period_id (required, number, `1`) ... ID of the period in the form of an integer
++ Attributes (object)
+    + employee
+        + name: Gina Williams
+        + position_name: Senior Product Manager
+    + current_period (PeriodGoals)
+    + next_period (PeriodGoals)
+
+
+### GET PositionPeriod Screen [GET]
+
+A single Employee is returned through a GET request where the employee id is sent as an URL parameter.
+
++ Request (application/json)
+
+    + Headers
+    
+            Accept-Charset: application/json
+            X-AUTH-TOKEN: DEBUGTOKEN
+            X-FORWARDED-HOST: mmbeta-133.umantis.lan
+            
++ Response 200 (application/hal+json)
+
+    + Headers
+    
+    + Body
+    + Attributes (PositionPeriod Screen)
+
+
+# Data Structures
+
+## PeriodGoals
++ period_name: 2015
++ period_evaluation: AA - Very good
++ goals_with_feedback (array[GoalsWithFeedback])
+
+## GoalsWithFeedback
++ goal_title: Create a good gateway
++ received_feedbacks: 0
++ total_feedbacks: 2
