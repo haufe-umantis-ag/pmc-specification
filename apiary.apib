@@ -15,7 +15,11 @@ Api of the PMC edge project
 + Attributes (object)
     + employee
         + name: Gina Williams
+        + surname: Williams
+        + photography: 2014/2/11/1392112142_7790_9331
+        + id: 1006
         + position_name: Senior Product Manager
+        + position_id: 136
     + current_period (PeriodGoals)
     + next_period (PeriodGoals)
 
@@ -43,11 +47,14 @@ A single Employee is returned through a GET request where the employee id is sen
 # Data Structures
 
 ## PeriodGoals
++ id: 103
 + period_name: 2015
 + period_evaluation: AA - Very good
 + goals_with_feedback (array[GoalsWithFeedback])
 
 ## GoalsWithFeedback
++ type: 1
++ id: 1548
 + goal_title: Create a good gateway
 + received_feedbacks: 0
 + total_feedbacks: 2
